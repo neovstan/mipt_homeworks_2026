@@ -1,0 +1,2 @@
+class AppSettingsError(Exception):
+    pass

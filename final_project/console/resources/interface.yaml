@@ -1,0 +1,25 @@
+terminal commands:
+  quit: \q
+  show help: /help
+  reset chat: /reset
+  chunk by paragraphs: /filechunk
+  chunk by length: /file_chunk
+
+terminal texts:
+  hello: GigaVibeMiptCode запущен. /help - список команд.
+  input prompt: '>>> '
+  ask file path: 'Введите путь до файла: '
+  ask chunk task: 'Что нужно сделать для каждого фрагмента? '
+  ask to continue chunks: 'Нажмите Enter для продолжения или \q для остановки: '
+  goodbye: Завершение.
+  cancelled by user: "\nЗапрос отменён."
+  llm failed: 'LLM: {error}'
+  file failed: 'Ошибка файла: {error}'
+  chat was reset: История чата очищена.
+  help text: 'Команды: \q, /reset, /filechunk [paragraph=N] [-y], /file_chunk len=M [-y]'
+  bad settings: 'Конфигурация невалидна: {error}'
+  chunk prompt: "{instruction}\n\nФрагмент {chunk_number}/{chunk_count}:\n{chunk}"
+  chunks are done: Обработка файла завершена.
+
+terminal screen:
+  clear terminal: "\u001b[2J\u001b[H"

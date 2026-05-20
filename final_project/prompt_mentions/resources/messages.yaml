@@ -1,0 +1,8 @@
+missing file: 'Файл не существует: {path}'
+not a file: 'Путь не указывает на файл: {path}'
+file is too big: 'Файл слишком большой: {path}'
+file size unavailable: 'Не удалось определить размер файла: {path}'
+not utf8 text: 'Файл не является корректным UTF-8 текстом: {path}'
+file read failed: 'Не удалось прочитать файл: {path}'
+bad chunk command: 'Некорректная команда пакетной обработки: {command}'
+bad chunk size: 'Размер чанка должен быть положительным: {value}'

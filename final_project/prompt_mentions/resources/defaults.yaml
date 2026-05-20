@@ -1,0 +1,5 @@
+file mention:
+  starts with: '@::'
+  ends with: '::'
+  eat spaces before it: true
+  max file size bytes: 5242880

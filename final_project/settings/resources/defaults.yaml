@@ -1,0 +1,7 @@
+model: gemma3:270m
+system prompt: Ты полезный ассистент. Используй предыдущие сообщения диалога как контекст текущего ответа.
+temperature: 0.3
+config file: config.yaml
+required env vars:
+  - API_KEY
+  - API_HOST
