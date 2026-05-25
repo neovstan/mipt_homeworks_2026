@@ -1,12 +1,59 @@
 # Итоговый проект "GigaVibeMiptCode"
 
-Актуальный текст задания доступен [здесь](https://docs.google.com/document/d/1hjEwsQd8m6-esJA37ZkGNIwK9Rn2edBC0MozFxpqxRg/edit?usp=sharing).
+Суть - консольный ИИ-ассистент на OpenAI-совместимом API, который умеет сохранять историю сообщений, выполняет chunking, поддерживает ссылки на файлы
 
-**Дедлайн загрузки решений: 23:59 22 мая.**
+# Команды
+```
+@::filepath:: - вставить содержимое файла
+/filechunk [pararaph=N, len=M, -y] - анализ файла с промптом для каждого чанка
+/reset - сбросить историю
+\q - выйти
+```
 
-В рамках проекта вам предстоит создать собственного ИИ-ассистента с консольным интерфейсом, который будет обрабатывать пользовательский ввод, отправлять запросы к LLM и выводить пользователю ответы в разных режимах.
+# Установка
+```
+cd path_to_repos
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
 
-Решения необходимо подгрузить в форки данного репозитория.
+# Настройка модели
+Нужен OpenAI-совместимый сервер
+Пример для Ollama:
+```
+olamma pull gemma3:270m
+olamma serve
+```
 
-Требования к линтерам смягчены: используйте ruff check с конфигурацией из нового ruff.toml
-Проверку типов выполняем через простой запуск mypy.
+# Конфигурация через config.yaml
+```
+api_key: ollama
+api_host: http://localhost/...
+model: gemma3:270m
+temperature: 0.3
+limit_message: 20
+limit_chars: 2000
+system_prompt: Мяу
+stream: false
+```
+
+# Запуск
+```
+.venv/bin/python -m final_project
+```
+
+# Покрытие тестами
+```
+19 passed
+coverage: 54%
+```
+
+# Архитектура
+```
+chat - история и OpenAI-клиент
+settings - загрузка и валидация настроек
+prompt_mentions - @::file:: и чанки
+console - CLI-интерфейс
+resources/*.yaml - тексты и дефолты
+```

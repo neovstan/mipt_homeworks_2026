@@ -1,0 +1,11 @@
+no settings found: Конфигурация отсутствует. Задайте переменные окружения или создайте config.yaml.
+config cannot be opened: 'Не удалось открыть config.yaml: {path}'
+config is broken yaml: 'config.yaml содержит некорректный YAML: {path}'
+config should be a map: config.yaml должен быть словарём.
+should be integer: 'Параметр {name} должен быть int.'
+should be float: 'Параметр {name} должен быть float.'
+should be boolean: 'Параметр {name} должен быть boolean.'
+api key is missing: Переменная API_KEY не задана.
+api host is missing: Переменная API_HOST не задана.
+limit should be positive: 'Параметр {name} должен быть положительным.'
+temperature out of range: temperature должен быть в диапазоне [0, 1].

@@ -1,0 +1,3 @@
+llm empty answer: LLM вернула пустой ответ.
+message limit error: limit_message должен быть неотрицательным
+character limit error: limit_chars должен быть неотрицательным
